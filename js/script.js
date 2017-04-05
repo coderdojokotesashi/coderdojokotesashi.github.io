@@ -84,7 +84,7 @@ $(function() {
 	var pause = 50; // will only process code within delay(function() { ... }) every 100ms.
 	$(window).resize(function() {
 		delay(function() {
-				var gallery_images = $('#slide-3 img');
+				var gallery_images = $('#slide-gallery img');
 				
 				var images_per_row = 0;
 				if ( gallery_images.length % 2 == 0 ) {
@@ -93,18 +93,18 @@ $(function() {
 					images_per_row = gallery_images.length / 2 + 1;
 				}
 				
-				var gallery_width = $('#slide-3 img').width() * $('#slide-3 img').length;
+				var gallery_width = $('#slide-gallery img').width() * $('#slide-gallery img').length;
 				gallery_width /= 2;
-				if ( $('#slide-3 img').length % 2 != 0 ) {
-					gallery_width += $('#slide-3 img').width();
+				if ( $('#slide-gallery img').length % 2 != 0 ) {
+					gallery_width += $('#slide-gallery img').width();
 				}
 				
-				$('#slide-3 .row').css('width', gallery_width );
+				$('#slide-gallery .row').css('width', gallery_width );
 				
-				var left_pos = $('#slide-3 .row').width() - $('body').width();
+				var left_pos = $('#slide-gallery .row').width() - $('body').width();
 				left_pos /= -2;
 				
-				$('#slide-3 .row').css('left', left_pos);
+				$('#slide-gallery .row').css('left', left_pos);
 			
 			},
 			pause
@@ -240,12 +240,12 @@ jQuery(document).ready(function ($) {
 ******************/
 jQuery(document).ready(function ($) {
 	//Cache some variables
-	var images = $('#slide-3 a');
+	var images = $('#slide-gallery a');
 	
 	images.hover(
 		function(e) {
 			var asta = $(this).find('img');
-			$('#slide-3 img').not( asta ).stop(false, false).animate(
+			$('#slide-gallery img').not( asta ).stop(false, false).animate(
 				{
 					opacity: .5
 				},
@@ -259,7 +259,7 @@ jQuery(document).ready(function ($) {
 			$(this).prepend(zoom);
 		},
 		function(e) {
-			$('#slide-3 img').stop(false, false).animate(
+			$('#slide-gallery img').stop(false, false).animate(
 				{
 					opacity: 1
 				},
@@ -298,15 +298,15 @@ jQuery(document).ready(function ($) {
 				offset_top = $('.slide[data-slide="' + (datasheet+1) + '"]').offset().top;
 				break;
 			case 'arrow-left':
-				offset_left = $('#slide-3 .row').offset().left + 452;
+				offset_left = $('#slide-gallery .row').offset().left + 452;
 				if ( offset_left > 0 ) {
 					offset_left = '0px';
 				}
 				break;
 			case 'arrow-right':
-				offset_left = $('#slide-3 .row').offset().left - 452;
-				if ( offset_left < $('body').width() - $('#slide-3 .row').width() ) {
-					offset_left = $('body').width() - $('#slide-3 .row').width();
+				offset_left = $('#slide-gallery .row').offset().left - 452;
+				if ( offset_left < $('body').width() - $('#slide-gallery .row').width() ) {
+					offset_left = $('body').width() - $('#slide-gallery .row').width();
 				}
 				break;
 		}
@@ -318,8 +318,8 @@ jQuery(document).ready(function ($) {
 		}
 		
 		if ( offset_left != false ) {
-			if ( $('#slide-3 .row').width() != $('body').width() ) {
-				$('#slide-3 .row').stop(false, false).animate({
+			if ( $('#slide-gallery .row').width() != $('body').width() ) {
+				$('#slide-gallery .row').stop(false, false).animate({
 					left: offset_left
 				}, 1500, 'easeInOutQuart');
 			}

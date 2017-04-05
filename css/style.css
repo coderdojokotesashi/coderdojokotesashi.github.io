@@ -138,7 +138,7 @@ body {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-	#slide-4 .content-row h2 {
+	#slide-operation .content-row h2 {
 		min-height: 6em;
 	}
 }
@@ -215,7 +215,7 @@ body {
 	text-align: center;
 }
 
-#slide-1 {
+#slide-home {
 	background-image: url('../images/bg1.jpg');
 	color: #ffffff;
     -webkit-background-size: 100%;
@@ -232,18 +232,18 @@ body {
 	background-position: center center;
 }
 
-#slide-1 h1 {
+#slide-home h1 {
 	padding-top: 130px;
 }
 
 @media (max-width: 991px) {
-	#slide-1 {
+	#slide-home {
 		background-position: -70% 0, 170% 0;
 	}
 }
 
 @media (max-width: 767px) {
-	#slide-1 {
+	#slide-home {
 		background-image: none;
 	}
 }
@@ -301,7 +301,7 @@ body {
 	}
 }
 
-#slide-2 {
+#slide-aboutus {
 	background-color: #1abc9c;
 	color: #e4e6e5;
 	padding-top: 90px;
@@ -380,7 +380,7 @@ body {
 	}
 }
 
-#slide-3 {
+#slide-gallery {
 	background-color: #000;
 	margin: 0 auto;
 	overflow: hidden;
@@ -389,7 +389,7 @@ body {
 	width: 100%;
 }
 	
-	#slide-3 .col-12 {
+	#slide-gallery .col-12 {
 		display: inline-block;
 		height: 451px;
 		margin: 0;
@@ -397,8 +397,8 @@ body {
 		width: 452px;
 	}
 
-	#slide-3 a,
-	#slide-3 img {
+	#slide-gallery a,
+	#slide-gallery img {
 		display: inline-block;
 		height: 100%;
 		margin: 0 auto;
@@ -406,24 +406,24 @@ body {
 	}
 	
 @media (max-width: 991px) {
-	#slide-3 {
+	#slide-gallery {
 		text-align: center;
 		width: 100%;
 	}
 	
-	#slide-3 .row {
+	#slide-gallery .row {
 		left: 0 !important;
 		margin: 0;
 		width: 100% !important;
 	}
 	
-	#slide-3 .col-12 {
+	#slide-gallery .col-12 {
 		height: auto;
 		width: 50%
 	}
 
-	#slide-3 a,
-	#slide-3 img {
+	#slide-gallery a,
+	#slide-gallery img {
 		height: auto;
 		max-height: 100%;
 		max-width: 100%;
@@ -432,30 +432,30 @@ body {
 }
 	
 @media (max-width: 767px) {
-	#slide-3 .col-12 {
+	#slide-gallery .col-12 {
 		width: 100%;
 	}
 }
 
-#slide-4 {
+#slide-operation {
 	background-color: #34495e;
 	color: #e4e6e5;
 	padding-top: 90px;
 }
 
-#slide-4 i {
+#slide-operation i {
 		font-size: 80px;
 		color: white;
 	}
 
 
-#slide-5 {
+#slide-entry {
 	background-color: #f39c12;
 	color: #e4e6e5;
 	padding-top: 90px;
 }
 
-#slide-6 {
+#slide-contact {
 	background-color: #2f2f2f;
 	color: #e4e6e5;
 	padding-bottom: 350px;
@@ -463,17 +463,17 @@ body {
 }
 
 @media (max-width: 767px) {
-	#slide-6 {
+	#slide-contact {
 		background-image: none;
 	}
 }
 	
-	#slide-6 .line-row .hr {
+	#slide-contact .line-row .hr {
 		background-color: #4e4e4e;
 		color: #4e4e4e;
 	}
 
-	#slide-6 a {
+	#slide-contact a {
 		color: inherit;
 		outline: none;
 		text-decoration: none;
