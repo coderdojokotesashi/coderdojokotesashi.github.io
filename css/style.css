@@ -39,7 +39,8 @@ html, body {
 }
 
 body {
-	background-color: #2f2f2f;
+	background-color: white;
+	color: black;
 	font-family: "Titillium Web", sans-serif;
 	font-weight: normal;
 	overflow-x: hidden;
@@ -177,8 +178,7 @@ body {
 		margin-right: 12px;
 	}
 			
-	.nav li[data-slide="1"],
-	.nav li[data-slide="6"] {
+	.nav li[data-slide="1"] {
 		background-color: #2f2f2f;
 	}
 	
@@ -196,6 +196,10 @@ body {
 	
 	.nav li[data-slide="5"] {
 		background-color: #e67e22;
+	}
+	
+	.nav li[data-slide="6"] {
+		background-color: #34495e;
 	}
 	
 	.navbar-brand {
@@ -217,7 +221,8 @@ body {
 
 #slide-home {
 	background-image: url('../images/bg1.jpg');
-	color: #ffffff;
+	background-color: gray;
+	color: white;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
     -o-background-size: 100%;
@@ -230,6 +235,26 @@ body {
     width: 100%;
 	background-attachment: relative;
 	background-position: center center;
+    z-index: 0;
+	overflow: hidden;
+}
+
+/*:beforeにぼかし効果を設定する*/
+#slide-home:before{
+  content: '';
+  background: inherit;/*.bgImageで設定した背景画像を継承する*/
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+  position: absolute;
+  /*ブラー効果で画像の端がボヤけた分だけ位置を調整*/
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;/*重なり順序を一番下にしておく*/
 }
 
 #slide-home h1 {
@@ -238,13 +263,15 @@ body {
 
 @media (max-width: 991px) {
 	#slide-home {
-		background-position: -70% 0, 170% 0;
+		background-position-x: left;
+/*		background-position: -70% 0, 170% 0; */
 	}
 }
 
 @media (max-width: 767px) {
 	#slide-home {
-		background-image: none;
+		color: white;
+/*		background-image: none; */
 	}
 }
 
@@ -302,8 +329,6 @@ body {
 }
 
 #slide-coderdojo {
-	background-color: #1abc9c;
-	color: #e4e6e5;
 	padding-top: 90px;
 }
 
@@ -313,7 +338,7 @@ body {
 	}
 	
 	.line-row .hr {
-		background-color: #e4e6e5;
+		background-color: #eea941;
 		height: 5px;
 		margin: 0 auto;
 		width: 33%;
@@ -350,7 +375,7 @@ body {
 	
 	i {
 		font-size: 80px;
-		color: white;
+		color: #d7b072;
 	}
 	
 
@@ -382,8 +407,6 @@ body {
 }
 
 #slide-kotesashi {
-	background-color: #e74c3c;
-	color: #e4e6e5;
 	padding-top: 90px;
 }
 
@@ -393,7 +416,7 @@ body {
 	}
 	
 	.line-row .hr {
-		background-color: #e4e6e5;
+		background-color: #eea941;
 		height: 5px;
 		margin: 0 auto;
 		width: 33%;
@@ -430,7 +453,7 @@ body {
 	
 	i {
 		font-size: 80px;
-		color: white;
+		color: #d7b072;
 	}
 	
 
@@ -461,7 +484,6 @@ body {
 }
 
 #slide-gallery {
-	background-color: #000;
 	margin: 0 auto;
 	overflow: hidden;
 	padding: 0;
@@ -519,29 +541,33 @@ body {
 
 
 #slide-entry {
-	background-color: #f39c12;
-	color: #e4e6e5;
 	padding-top: 90px;
 }
+
+	.line-row .hr {
+		background-color: #eea941;
+		height: 5px;
+		margin: 0 auto;
+		width: 33%;
+	}
 
 #slide-contact {
-	background-color: #2f2f2f;
-	color: #e4e6e5;
-	padding-bottom: 350px;
 	padding-top: 90px;
 }
 
+	.line-row .hr {
+		background-color: #eea941;
+		height: 5px;
+		margin: 0 auto;
+		width: 33%;
+	}
+	
 @media (max-width: 767px) {
 	#slide-contact {
 		background-image: none;
 	}
 }
 	
-	#slide-contact .line-row .hr {
-		background-color: #4e4e4e;
-		color: #4e4e4e;
-	}
-
 	#slide-contact a {
 		color: inherit;
 		outline: none;
@@ -584,8 +610,6 @@ body {
 	}
 
 #slide-7 {
-	background-color: #e4e6e5;
-	color: #4e4e4e;
 	font-size: 35px;
 	line-height: 50px;
 	text-align: center;
