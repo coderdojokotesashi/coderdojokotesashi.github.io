@@ -257,8 +257,14 @@ body {
   z-index: -1;/*重なり順序を一番下にしておく*/
 }
 
+#slide-home img {
+	padding-top: 50px;
+	width:20%;
+	height:20%;
+}
+
 #slide-home h1 {
-	padding-top: 130px;
+	padding-top: 10px;
 }
 
 @media (max-width: 991px) {
@@ -273,6 +279,13 @@ body {
 		color: white;
 /*		background-image: none; */
 	}
+
+	#slide-home img {
+		padding-top: 50px;
+		width:30%;
+		height:30%;
+	}
+
 }
 
 	#home-row-1,
