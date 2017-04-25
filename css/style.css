@@ -577,6 +577,10 @@ body {
 		width: 33%;
 	}
 
+	#slide-entry .btn {
+		font-size: 24px;
+	}
+
 #slide-contact {
 	padding-bottom: 350px;
 	padding-top: 90px;
