@@ -291,9 +291,14 @@ body {
 
 }
 
-	#home-row-1,
+	#home-row-1 {
+		padding-top: 12px;
+		padding-bottom: 25px;
+	}
+	
 	#home-row-2 {
-		padding-top: 25px;
+		padding-top: 0px;
+		padding-bottom: 25px;
 	}
 	
 	#home-row-1 h1 {
